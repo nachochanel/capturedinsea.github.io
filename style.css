@@ -1,25 +1,28 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
-  margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px; /* huge spacing like Rob */
 }
 
 .gallery img {
-    width: 80%;
+    width: 100%;
+    max-width: 1500px; /* cinematic width */
     height: auto;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 8px;
-    margin: 0 auto;
 }
-
 
