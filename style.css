@@ -14,10 +14,12 @@ body {
 }
 
 .gallery img {
-    width: 100%;
+    width: 80%;
     height: auto;
     max-height: 90vh;
     object-fit: contain;
     border-radius: 8px;
+    margin: 0 auto;
 }
+
 
