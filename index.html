@@ -8,8 +8,30 @@
   <h1>Captured In Sea</h1>
   <p>South East Asia • Sony A6400</p>
 
-  <div class="gallery">
-    <img src="photos/Phototest.JPG">
-  </div>
+ <div class="gallery">
+  <img src="photos/Phototest.JPG">
+
+  <!-- hidden slider -->
+  <input type="range" id="sizeSlider" min="500" max="1500" value="1500" style="display:none;">
+</div>
+
+    <!-- secret keyboard code goes HERE -->
+  <script>
+    const slider = document.getElementById('sizeSlider');
+    const img = document.querySelector('.gallery img');
+
+    // Toggle slider visibility with SHIFT + S
+    document.addEventListener('keydown', (e) => {
+      if (e.shiftKey && e.key === 'S') {
+        slider.style.display = slider.style.display === 'none' ? 'block' : 'none';
+      }
+    });
+
+    // Resize image when slider moves
+    slider.addEventListener('input', () => {
+      img.style.maxWidth = slider.value + 'px';
+    });
+  </script>
+  
 </body>
 </html>
