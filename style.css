@@ -16,15 +16,24 @@ h1 {
     text-align: left;
 }
 
+p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
 .gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 120px;
+    gap: 120px; /* cinematic spacing */
 }
 
 .gallery img {
     width: 100%;
-    max-width: 1500px;
+    max-width: 750px; /* your favourite size */
     height: auto;
 }
