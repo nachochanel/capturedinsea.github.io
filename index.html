@@ -10,21 +10,23 @@
   <p>South East Asia • Sony A6400</p>
 
   <div class="gallery">
-    <img src="photos/Phototest.JPG">
+    <img src="photos/Phototest.JPG" style="max-width:750px;">
 
     <!-- hidden slider -->
-    <input type="range" id="sizeSlider" min="500" max="1500" value="1500" style="display:none;">
+    <input type="range" id="sizeSlider" min="500" max="1500" value="750" style="display:none;">
 
     <!-- hidden admin panel -->
     <div id="adminPanel" style="display:none; margin-top:20px;">
       <h3 style="font-size:14px; margin-bottom:10px;">Admin Panel</h3>
 
       <label style="font-size:12px;">Image Width (px):</label>
-      <input type="number" id="widthInput" min="300" max="2000" value="1500" style="width:80px;">
+      <input type="number" id="widthInput" min="300" max="2000" value="750" style="width:80px;">
 
       <button id="copyCSS" style="margin-left:10px;">Copy CSS</button>
 
-      <p id="cssOutput" style="font-size:12px; margin-top:10px; color:#555;"></p>
+      <p id="cssOutput" style="font-size:12px; margin-top:10px; color:#555;">
+        .gallery img { max-width: 750px; }
+      </p>
     </div>
   </div>
 
@@ -53,17 +55,4 @@
     // Update image when number changes
     widthInput.addEventListener('input', () => {
       img.style.maxWidth = widthInput.value + 'px';
-      cssOutput.textContent = `.gallery img { max-width: ${widthInput.value}px; }`;
-    });
-
-    // Copy CSS to clipboard
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(cssOutput.textContent);
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => copyBtn.textContent = "Copy CSS", 1000);
-    });
-  </script>
-
-</body>
-</html>
-
+      cssOutput.textContent = `.gallery img { max-width: ${
